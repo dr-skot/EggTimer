@@ -22,3 +22,13 @@ also
 @timer.stop
 @timer.reset
 ```
+
+## TODO
+
+It would be more rubyish to say
+
+```ruby
+@timer.when(:didExpire) do
+  # something
+end
+```

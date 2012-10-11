@@ -71,11 +71,12 @@ class EggTimer
   end
 
   def unanimated(options = {})
-    CATransaction.begin
-    CATransaction.setDisableActions(true)
-    CATransaction.setCompletionBlock(options[:completion])
-    yield
-    CATransaction.commit
+    animated(0, options) { yield }
+    # CATransaction.begin
+    # CATransaction.setDisableActions(true)
+    # CATransaction.setCompletionBlock(options[:completion])
+    # yield
+    # CATransaction.commit
   end
 
 end
